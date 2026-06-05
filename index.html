@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Aloe</title>
+
+<style>
+:root{
+    --bg:#09090f;
+    --card:#131320;
+    --purple:#8a63ff;
+    --pink:#d87cff;
+    --text:#f2f2f2;
+    --muted:#a7a7b8;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:system-ui,sans-serif;
+}
+
+body{
+    background:
+    radial-gradient(circle at top,#1a1030,#09090f 60%);
+    min-height:100vh;
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+.particle{
+    position:fixed;
+    width:4px;
+    height:4px;
+    background:rgba(255,255,255,.3);
+    border-radius:50%;
+    animation:float 10s linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+    20%{opacity:1;}
+    to{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
+
+#intro{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+h1{
+    font-size:2.5rem;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    color:var(--muted);
+    margin-bottom:40px;
+}
+
+#runawayBtn{
+    position:absolute;
+    background:linear-gradient(45deg,var(--purple),var(--pink));
+    color:white;
+    border:none;
+    padding:18px 28px;
+    border-radius:50px;
+    font-size:1rem;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 0 20px rgba(138,99,255,.5);
+    transition:.2s;
+}
+
+.hidden{
+    display:none;
+}
+
+#content{
+    opacity:0;
+    transform:translateY(30px);
+    transition:1s;
+    padding:25px;
+}
+
+#content.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.card{
+    background:rgba(19,19,32,.8);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:25px;
+    padding:25px;
+    margin-bottom:20px;
+    animation:pop .8s ease;
+}
+
+@keyframes pop{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.message{
+    line-height:1.8;
+    color:#ddd;
+}
+
+.message p{
+    margin-bottom:15px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:20px;
+    border:2px solid rgba(138,99,255,.3);
+}
+
+.quote{
+    text-align:center;
+    font-style:italic;
+    color:#caa6ff;
+    font-size:1.1rem;
+}
+
+footer{
+    text-align:center;
+    padding:40px 20px;
+    color:#888;
+}
+</style>
+</head>
+<body>
+
+<div id="intro">
+    <h1>Hey Aloe 🖤</h1>
+    <p class="subtitle">
+        There's something important here for you.
+    </p>
+
+    <button id="runawayBtn">
+        Open It
+    </button>
+</div>
+
+<div id="content" class="hidden">
+
+    <div class="card">
+        <h2>For You</h2>
+        <div class="message">
+            <p>
+                Life can be cruel sometimes.
+            </p>
+
+            <p>
+                Some days feel heavy. Some days feel endless.
+                Some days make you wonder if things will ever
+                stop hurting.
+            </p>
+
+            <p>
+                But none of those days get to decide your future.
+            </p>
+
+            <p>
+                You've survived every terrible day that has ever
+                tried to break you.
+            </p>
+
+            <p>
+                You don't have to have everything figured out.
+                You don't have to know where you're going.
+                You don't have to carry the entire world on
+                your shoulders.
+            </p>
+
+            <p>
+                Just keep going one day at a time.
+            </p>
+
+            <p>
+                Even if today sucks.
+                Even if tomorrow sucks.
+                Even if the week sucks.
+            </p>
+
+            <p>
+                Storms end.
+                Waves settle.
+                Wounds heal.
+            </p>
+
+            <p>
+                And you're stronger than you think.
+            </p>
+        </div>
+    </div>
+
+    <div class="card quote">
+        "The ocean always finds calm water eventually."
+    </div>
+
+    <div class="card">
+        <h2>Song of the Sea Memories</h2>
+
+        <div class="gallery">
+
+            <!-- Replace these with Song of the Sea images -->
+
+            <img src="song1.jpg" alt="Song of the Sea Image">
+
+            <img src="song2.jpg" alt="Song of the Sea Image">
+
+            <img src="song3.jpg" alt="Song of the Sea Image">
+
+            <img src="song4.jpg" alt="Song of the Sea Image">
+
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>One More Thing...</h2>
+
+        <div class="message">
+            <p>
+                The people who care about you aren't waiting for
+                you to become perfect.
+            </p>
+
+            <p>
+                They're here because you're you.
+            </p>
+
+            <p>
+                Even on the messy days.
+                Even on the exhausted days.
+                Even on the days when everything feels impossible.
+            </p>
+
+            <p>
+                You're allowed to rest.
+                You're allowed to struggle.
+                You're allowed to keep going at your own pace.
+            </p>
+
+            <p>
+                And no matter how dark things feel right now,
+                there is still another sunrise waiting for you.
+            </p>
+
+            <p>
+                Keep going, Aloe.
+                The story isn't over yet. 🖤
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        Made with love.
+    </footer>
+
+</div>
+
+<script>
+const btn = document.getElementById("runawayBtn");
+
+let escapes = 0;
+
+function moveButton(){
+
+    if(escapes < 8){
+
+        const maxX = window.innerWidth - btn.offsetWidth - 20;
+        const maxY = window.innerHeight - btn.offsetHeight - 20;
+
+        btn.style.left = Math.random() * maxX + "px";
+        btn.style.top = Math.random() * maxY + "px";
+
+        escapes++;
+    }
+}
+
+btn.addEventListener("touchstart", moveButton);
+btn.addEventListener("mouseover", moveButton);
+
+btn.addEventListener("click", () => {
+
+    if(escapes < 8){
+        moveButton();
+        return;
+    }
+
+    document.getElementById("intro").style.display = "none";
+
+    const content = document.getElementById("content");
+
+    content.classList.remove("hidden");
+
+    setTimeout(() => {
+        content.classList.add("show");
+    },100);
+});
+
+for(let i=0;i<35;i++){
+
+    const p=document.createElement("div");
+
+    p.className="particle";
+
+    p.style.left=Math.random()*100+"vw";
+
+    p.style.animationDuration=
+    (Math.random()*8+6)+"s";
+
+    p.style.animationDelay=
+    Math.random()*5+"s";
+
+    document.body.appendChild(p);
+}
+</script>
+
+</body>
+</html>
